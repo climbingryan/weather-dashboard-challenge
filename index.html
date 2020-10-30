@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -20,7 +21,9 @@
             <form>
                 <label for="city">Search for a City:</label> 
                     <br>
-                <input type="text" id="city" name="city" value=""> <div class="box"><i class="material-icons">search</i></div>
+                <input type="text" id="city" name="city" value=""> 
+                    <div class="box"><i class="material-icons">search</i>
+                    </div>
             </form>
             <ul class="list-cities">
                 <li><button class="btn" id="austin">Austin</button></li>
@@ -34,13 +37,20 @@
             </ul>
         </div>
         <!-- main container -->
-        <div>
+        <div class="main-info-container">
             <!-- weather details -->
-            <div>
-
+            <div class="weather-details-container">
+                <h1 id="current-city">Austin (8.15.20)☁️</h1>
+                <ul class="details-list">
+                    <li id="temperature">temp</li>
+                    <li id="humidity">hum</li>
+                    <li id="wind-speed">wind</li>
+                    <li id="uv-index">uv</li>
+                </ul>
             </div>
             <!-- 5-day forecast container -->
-            <div>
+            <div class="forecast">
+                <h1>5-Day Forecast:</h1>
 
             </div>
         </div>
