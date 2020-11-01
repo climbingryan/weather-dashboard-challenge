@@ -21,9 +21,8 @@
             <form>
                 <label for="city">Search for a City:</label> 
                     <br>
-                <input type="text" id="city" name="city" value=""> 
-                    <div class="box"><i class="material-icons">search</i>
-                    </div>
+                <input type="text" id="cityIn" name="city" value="austin"> 
+                    <button onclick="weatherFunction()"><i class="material-icons">search</i></button>
             </form>
             <ul class="list-cities">
                 <li><button class="btn" id="austin">Austin</button></li>
@@ -51,7 +50,26 @@
             <!-- 5-day forecast container -->
             <div class="forecast">
                 <h1>5-Day Forecast:</h1>
+            <div class="card-container">  
+                <div class="card">
+                    <h3>8.15.20</h3>
+                    <i></i>
+                    <p id="card-temp"></p>
+                    <p id="card-humid"></p>
+                </div>
+                <div class="card">
 
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+            </div>
             </div>
         </div>
     </main>
