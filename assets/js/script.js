@@ -10,7 +10,7 @@ var weatherFunction = function() {
     })
 
     .then(function(response) {
-        console.log(response);;
+        console.log(response);
                 // CHICAGO
             document.getElementById("chicago").addEventListener("click", function() {
                 inputVal = document.getElementById("cityIn");
@@ -74,7 +74,6 @@ var weatherFunction = function() {
         windSpeedEl.textContent = "Wind-Index: " + windSpeed + " MPH";
         
             // temperature
-                // puts temp in larger weather details
         var temperature = response.main.temp;
         var tempEl = document.getElementById("temperature");
         tempEl.textContent = "Temperature " + temperature + " F";
@@ -83,21 +82,65 @@ var weatherFunction = function() {
         var humidity = response.main.humidity;
         var humidEl = document.getElementById("humidity");
         humidEl.textContent = "Humidity: " + humidity + "%";
-        
-            // CARDS
-                // Temp for next day
-       // var cardTempOne = document.getElementById("card-temp");
-       // cardTempOne.textContent = "Temperature " + temperature + " F";
     })
+
+    var cityInput = document.getElementById("cityIn").value;
+    cityInput = localStorage.getItem("city");
+
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityInput + '&units=imperial&appid=abb013d2d528fa0ed28972b8e1a2ae76')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(response) {
+        console.log(response);
+
+        // dates
+        var dates = function() {
+                // day 1
+        var dateWhole = response.list[0].dt_txt.split(" ");
+        var date = dateWhole[0];
+        var dateTitle = document.getElementById("day");
+        dateTitle.textContent = date;
+            // day 2
+        var dateWholeTwo = response.list[6].dt_txt.split(" ");
+        var dateTwo = dateWholeTwo[0];
+        var dateTitleTwo = document.getElementById("day-two");
+        dateTitleTwo.textContent = dateTwo;
+            // day 3
+        var dateWholeThree = response.list[14].dt_txt.split(" ");
+        var dateThree = dateWholeThree[0];
+        var dateTitleThree = document.getElementById("day-three");
+        dateTitleThree.textContent = dateThree;
+            // day 4
+        var dateWholeFour = response.list[22].dt_txt.split(" ");
+        var dateFour = dateWholeFour[0];
+        var dateTitleFour = document.getElementById("day-four");
+        dateTitleFour.textContent = dateFour;
+            // day 5
+        var dateWholeFive = response.list[30].dt_txt.split(" ");
+        var dateFive = dateWholeFive[0];
+        var dateTitleFive = document.getElementById("day-five");
+        dateTitleFive.textContent = dateFive;
+        } 
+        dates();
+
+        // if else for emoji's
+
+        //temp
+
+        //humidity
+
+    });
 }    
+
+
+
+
 
 weatherFunction();
 
+
 // document.querySelector("#cityIn").value
-
-/* 
-
-*/
 
 /* var buttonCities = function(city) {
             document.getElementById(city).addEventListener("click", function() {
