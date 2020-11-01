@@ -151,7 +151,29 @@ var weatherFunction = function() {
         }
         temp();
         //humidity
-
+        var humidity = function() {
+                //day 1
+            var hum = response.list[0].main.humidity;
+            var humEl = document.getElementById("card-humid");
+            humEl.textContent = hum;    
+                //day 2
+            var hum = response.list[6].main.humidity;
+            var humEl = document.getElementById("card-humid-two");
+            humEl.textContent = hum; 
+                //day 3
+            var hum = response.list[14].main.humidity;
+            var humEl = document.getElementById("card-humid-three");
+            humEl.textContent = hum;                 
+                //day 4
+            var hum = response.list[22].main.humidity;
+            var humEl = document.getElementById("card-humid-four");
+            humEl.textContent = hum;                 
+                //day 5
+            var hum = response.list[30].main.humidity;
+            var humEl = document.getElementById("card-humid-five");
+            humEl.textContent = hum; 
+        }
+        humidity();
     });
 }    
 
