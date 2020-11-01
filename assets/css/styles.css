@@ -131,11 +131,14 @@ input {
     justify-content: space-evenly;
 }
 .card {
-    color: black;
+    color: white;
     background-color: rgba(27, 107, 255, 0.801);
     padding: 10px;
     border: 1px solid rgba(27, 107, 255, 0.801);
     border-radius: 5px;
+}
+.card h3 {
+    font-weight: 450;
 }
 .card-temp {
     margin: 10px 0 10px 0;
