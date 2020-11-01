@@ -22,7 +22,7 @@ header, nav, h1 {
     font-size: 1.5em;
 }
 body {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 main {
     display: grid;
@@ -132,7 +132,16 @@ input {
 }
 .card {
     color: black;
-    background-color: rgba(99, 193, 255, 0.657);
+    background-color: rgba(27, 107, 255, 0.801);
+    padding: 10px;
+    border: 1px solid rgba(27, 107, 255, 0.801);
+    border-radius: 5px;
+}
+.card-temp {
+    margin: 10px 0 10px 0;
+}
+.card-hum {
+    margin: 10px 0 10px 0;
 }
 .icon {
     height: 100px;

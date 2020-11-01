@@ -330,7 +330,6 @@ var weatherFunction = function() {
                 iconFiveEl.setAttribute("src", "http://openweathermap.org/img/wn/50n@2x.png");
             }
         }
-
         iconFunction();
         iconTwoFunction();
         iconThreeFunction();
