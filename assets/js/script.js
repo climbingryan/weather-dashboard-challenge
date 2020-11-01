@@ -127,7 +127,29 @@ var weatherFunction = function() {
         // if else for emoji's
 
         //temp
-
+        var temp = function() {
+                // day 1
+        var temperature = response.list[0].main.temp;
+        var tempEl = document.getElementById("card-temp");
+        tempEl.textContent = "Temp: " + temperature + "F";
+            // day 2
+        var temperature = response.list[6].main.temp;
+        var tempEl = document.getElementById("card-temp-two");
+        tempEl.textContent = "Temp: " + temperature + "F";
+            // day 3
+        var temperature = response.list[14].main.temp;
+        var tempEl = document.getElementById("card-temp-three");
+        tempEl.textContent = "Temp: " + temperature + "F";
+            // day 4
+        var temperature = response.list[18].main.temp;
+        var tempEl = document.getElementById("card-temp-four");
+        tempEl.textContent = "Temp: " + temperature + "F";
+            // day 5
+        var temperature = response.list[30].main.temp;
+        var tempEl = document.getElementById("card-temp-five");
+        tempEl.textContent = "Temp: " + temperature + "F";
+        }
+        temp();
         //humidity
 
     });
